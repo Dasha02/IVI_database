@@ -10,7 +10,7 @@ Original file is located at
 import csv
 import matplotlib.pyplot as plt
 
-# Открываем CSV-файл и читаем данные
+
 x = []
 y = []
 with open('subscribe.csv', 'r') as file:
@@ -20,91 +20,84 @@ with open('subscribe.csv', 'r') as file:
         x.append((row[0]))  # Считываем значения для оси X
         y.append(int(row[1]))  # Считываем значения для оси Y
 
-# Создаем график
 colors = ['darksalmon', 'yellow', 'pink', 'coral']
 
 plt.barh(x, y, color=colors)
 
-# Настраиваем оси и заголовки
 plt.xlabel('Кол-во сериалов')
 plt.ylabel('Типы подписокв')
 plt.title('Доступные сериалы по подписке')
 
-# Отображаем график
 plt.show()
 
-# Открываем CSV-файл и читаем данные
+
+
+
+
 x = []
 y = []
 with open('export.csv', 'r') as file:
     reader = csv.reader(file)
-    next(reader)  # Пропускаем заголовки столбцов
+    next(reader)  
     for row in reader:
-        x.append((row[0]))  # Считываем значения для оси X
-        y.append(int(row[1]))  # Считываем значения для оси Y
+        x.append((row[0]))  
+        y.append(int(row[1]))  
 
-# Создаем график
+
 plt.figure(figsize=(8, 10))
 colors = ['darksalmon', 'yellow', 'pink', 'coral']
 
 plt.barh(x, y, color=colors)
 
-# Настраиваем оси и заголовки
 plt.xlabel('Год')
 plt.ylabel('Кол-во фильмов')
 plt.title('Кол-во снятых фильмов в году')
 
-# Отображаем график
 plt.show()
 
 
 
-# Открываем CSV-файл и читаем данные
+
 x = []
 y = []
 with open('u.csv', 'r') as file:
     reader = csv.reader(file)
-    next(reader)  # Пропускаем заголовки столбцов
+    next(reader)  
     for row in reader:
-        x.append((row[0]))  # Считываем значения для оси X
-        y.append(int(row[1]))  # Считываем значения для оси Y
+        x.append((row[0]))  
+        y.append(int(row[1]))  
 
-# Создаем график
 plt.figure(figsize=(8, 22))
 colors = ['darksalmon', 'yellow', 'pink', 'coral']
 
 plt.barh(x, y, color=colors)
 
-# Настраиваем оси и заголовки
 plt.xlabel('Кол-во отзывов')
 plt.ylabel('Имя пользователя')
 plt.title('Кол-во оставленных отзывов')
 
-# Отображаем график
 plt.show()
 
 
 
-# Открываем CSV-файл и читаем данные
+
 x = []
 y = []
 with open('genre.csv', 'r') as file:
     reader = csv.reader(file)
-    next(reader)  # Пропускаем заголовки столбцов
+    next(reader) 
     for row in reader:
-        x.append((row[0]))  # Считываем значения для оси X
-        y.append(int(row[1]))  # Считываем значения для оси Y
+        x.append((row[0]))  
+        y.append(int(row[1]))  
 
-# Создаем график
-#plt.figure(figsize=(8, 22))
+
 colors = ['darksalmon', 'yellow', 'pink', 'coral']
 
 plt.barh(x, y, color=colors)
 
-# Настраиваем оси и заголовки
+
 plt.xlabel('Кол-во сериалов')
 plt.ylabel('Название жанра')
 plt.title('Кол-во сериалов в каждом жанре')
 
-# Отображаем график
 plt.show()
